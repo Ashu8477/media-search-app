@@ -21,7 +21,7 @@ export async function fetchVideos(query, per_page = 15) {
 }
 
 export async function fetchGIF(query, limit = 20) {
-  const res = await axios.get('https://api.giphy.com/v1/gifs/search', {
+  const res = await axios.get('https://api.giphy.com/v1/gifs/search' , {
     params: { q: query, api_key: GIPHY_KEY, limit },
   });
   return res;
